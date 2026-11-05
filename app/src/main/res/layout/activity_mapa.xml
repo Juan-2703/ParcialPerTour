@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarMapa"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/verde_oscuro"
+        app:title="Mapa turístico"
+        app:titleTextColor="@color/blanco"
+        app:navigationIcon="@drawable/ic_volver"
+        app:navigationIconTint="@color/blanco"
+        app:navigationContentDescription="Volver" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="180dp">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapaPerTour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:background="@color/blanco"
+            android:padding="5dp"
+            android:text="© OpenStreetMap contributors"
+            android:textColor="@color/texto_secundario"
+            android:textSize="11sp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Punto de encuentro"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPuntoMapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Selecciona una reserva para ver su ubicación."
+                android:textColor="@color/texto_principal"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtCoordenadasMapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/texto_secundario"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnMiUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/verde_natural"
+                android:text="Mi ubicación"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnAbrirGoogleMaps"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/verde_suave"
+                android:text="Abrir en Google Maps"
+                android:textAllCaps="false"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

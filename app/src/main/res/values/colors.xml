@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_natural">#4F7942</color>
+    <color name="verde_oscuro">#35552D</color>
+    <color name="verde_suave">#E4EBDD</color>
+    <color name="fondo_claro">#F7F7F2</color>
+    <color name="texto_principal">#293329</color>
+    <color name="texto_secundario">#687267</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="texto_placeholder">#929A95</color>
+    <color name="texto_claro">#D9E7EC</color>
+
+    <color name="overlay_splash">#66000000</color>
+    <color name="blanco_suave">#F5F5F5</color>
+    <color name="fondo_texto_splash">#33000000</color>
+</resources>
