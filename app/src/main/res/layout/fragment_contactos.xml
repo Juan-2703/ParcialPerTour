@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contáctanos"
+            android:textColor="@color/verde_oscuro"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="¿Tienes alguna consulta? Estamos aquí para ayudarte."
+            android:textColor="@color/texto_secundario"
+            android:textSize="24sp"
+            android:lineSpacingExtra="6sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tus datos"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Nombre completo"
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtNombreContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/verde_suave"
+                    android:padding="14dp"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Correo electrónico"
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtCorreoContacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/verde_suave"
+                    android:padding="14dp"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Envíanos tu consulta"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Asunto"
+                    app:boxBackgroundMode="outline"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:hintTextColor="@color/verde_natural"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtAsuntoContacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:hint="Motivo de tu consulta"
+                        android:inputType="textCapSentences"
+                        android:singleLine="true"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:textColor="@color/texto_principal"
+                        android:textColorHint="@color/texto_placeholder" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Mensaje"
+                    app:boxBackgroundMode="outline"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:hintTextColor="@color/verde_natural"
+                    app:expandedHintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtMensajeContacto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="140dp"
+                        android:gravity="top|start"
+                        android:hint="Escribe aquí tu consulta..."
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:padding="12dp"
+                        android:textColor="@color/texto_principal"
+                        android:textColorHint="@color/texto_placeholder" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnEnviarConsulta"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/verde_natural"
+                    android:text="Enviar consulta"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blanco"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detalle de reserva"
+            android:textColor="@color/verde_oscuro"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Consulta la información de tu aventura."
+            android:textColor="@color/texto_secundario"
+            android:textSize="24sp"
+            android:lineSpacingExtra="6sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgDestinoDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Fotografía del destino turístico" />
+
+                <TextView
+                    android:id="@+id/txtDestinoDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Información de la reserva"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInformacionDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="24sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <TextView
+                    android:id="@+id/txtEstadoDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/verde_natural"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCambiarEstado"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/verde_natural"
+                    android:text="Cambiar estado"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blanco"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Punto de encuentro"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtPuntoDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textColor="@color/texto_principal"
+                    android:textSize="24sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <TextView
+                    android:id="@+id/txtCoordenadasDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="24sp"
+                    android:lineSpacingExtra="6sp" />
+
+                <Button
+                    android:id="@+id/btnVerMapaDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/verde_natural"
+                    android:text="Ver en Google Maps"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blanco"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnVolverDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/verde_suave"
+            android:text="Volver a mis reservas"
+            android:textAllCaps="false"
+            android:textColor="@color/verde_oscuro"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

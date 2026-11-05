@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contenidoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:id="@+id/imgLogoRegistro"
+                android:layout_width="120dp"
+                android:layout_height="108dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_alt"
+                android:contentDescription="Logo de Per Tour" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Crear una cuenta"
+                android:textColor="@color/verde_oscuro"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="Regístrate para planificar tu próxima aventura"
+                android:textColor="@color/texto_secundario"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nombre completo"
+                app:boxBackgroundColor="@color/blanco"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/verde_natural"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/verde_natural">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:hint="Nombre Completo"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/texto_principal"
+                    android:textColorHint="@color/texto_placeholder" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Correo electrónico"
+                app:boxBackgroundColor="@color/blanco"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/verde_natural"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/verde_natural">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCorreoRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:hint="ejemplo@correo.com"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/texto_principal"
+                    android:textColorHint="@color/texto_placeholder" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Contraseña"
+                app:boxBackgroundColor="@color/blanco"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/verde_natural"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/verde_natural"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtContraseñaRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:hint="Contraseña"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/texto_principal"
+                    android:textColorHint="@color/texto_placeholder" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Confirmar contraseña"
+                app:boxBackgroundColor="@color/blanco"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/verde_natural"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/verde_natural"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtConfirmarContraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:hint="Confirmar Contraseña"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/texto_principal"
+                    android:textColorHint="@color/texto_placeholder" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/verde_natural"
+                android:text="Crear cuenta"
+                android:textAllCaps="false"
+                android:textColor="@color/blanco"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtVolverLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="¿Ya tienes una cuenta? Inicia sesión"
+                android:textColor="@color/texto_secundario"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
