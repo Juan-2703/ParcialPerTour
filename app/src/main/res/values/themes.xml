@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ParcialApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/verde_natural</item>
+        <item name="colorPrimaryVariant">@color/verde_oscuro</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/verde_natural</item>
+        <item name="colorSecondaryVariant">@color/verde_oscuro</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+        <item name="android:statusBarColor">@color/verde_oscuro</item>
+        <item name="android:navigationBarColor">@color/verde_oscuro</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/fondo_claro</item>
+    </style>
+</resources>

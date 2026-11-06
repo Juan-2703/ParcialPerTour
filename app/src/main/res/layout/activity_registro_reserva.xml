@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar reserva"
+            android:textColor="@color/verde_oscuro"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Completa los datos para planificar tu próxima aventura."
+            android:textColor="@color/texto_secundario"
+            android:textSize="24sp"
+            android:lineSpacingExtra="6sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos de la reserva"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutNombreReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:hint="Nombre del cliente"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/verde_natural"
+                    app:placeholderText="Nombre completo"
+                    app:placeholderTextColor="@color/texto_placeholder">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtClienteNombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:inputType="textPersonName"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutTelefonoReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Teléfono"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/verde_natural"
+                    app:placeholderText="Ejemplo: 987654321"
+                    app:placeholderTextColor="@color/texto_placeholder">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTelefonoReserva"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:inputType="phone"
+                        android:maxLength="9"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutDestinoReserva"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Destino turístico"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/verde_natural"
+                    app:placeholderText="Selecciona un destino"
+                    app:placeholderTextColor="@color/texto_placeholder">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/edtDestinoReserva"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:inputType="none"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/contenedorDestinoSeleccionado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/fondo_claro"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgDestinoSeleccionado"
+                                android:layout_width="match_parent"
+                                android:layout_height="175dp"
+                                android:contentDescription="Fotografía del destino turístico"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/machu_picchu" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="14dp">
+
+                                <TextView
+                                    android:id="@+id/txtNombreDestinoSeleccionado"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Destino seleccionado"
+                                    android:textColor="@color/verde_oscuro"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtUbicacionDestinoSeleccionado"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Cusco, Perú"
+                                    android:textColor="@color/texto_secundario"
+                                    android:textSize="15sp" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnVerMapaDestino"
+                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="Ver ubicación del destino"
+                                    android:textColor="@color/verde_oscuro"
+                                    app:strokeColor="@color/verde_natural" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutFechaReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Fecha de viaje"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/verde_natural"
+                    app:placeholderText="Selecciona la fecha"
+                    app:placeholderTextColor="@color/texto_placeholder">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtFechaReserva"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:inputType="none"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutCantidadPersonas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="Cantidad de personas"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/verde_natural"
+                    app:placeholderText="Número de viajeros"
+                    app:placeholderTextColor="@color/texto_placeholder">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCantidadPersonas"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Punto de encuentro"
+                    android:textColor="@color/verde_oscuro"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Selecciona dónde comenzará tu aventura."
+                    android:textColor="@color/texto_secundario"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPuntoEncuentro"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:hint="Lugar de encuentro"
+                    app:boxBackgroundColor="@color/blanco"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/verde_natural"
+                    app:expandedHintEnabled="false"
+                    app:hintTextColor="@color/verde_natural"
+                    app:placeholderText="Selecciona un lugar"
+                    app:placeholderTextColor="@color/texto_placeholder">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/edtPuntoEncuentro"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:gravity="center_vertical"
+                        android:inputType="none"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="16sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/contenedorMiniMapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/fondo_claro"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtNombrePunto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="12dp"
+                                android:text="Ubicación seleccionada"
+                                android:textColor="@color/verde_oscuro"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <org.osmdroid.views.MapView
+                                android:id="@+id/mapaMiniReserva"
+                                android:layout_width="match_parent"
+                                android:layout_height="210dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:padding="8dp"
+                                android:text="© OpenStreetMap contributors"
+                                android:textColor="@color/texto_secundario"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnVerMapaCompleto"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Ver mapa completo"
+                        android:textColor="@color/verde_oscuro"
+                        app:strokeColor="@color/verde_natural" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Estado inicial: PENDIENTE"
+                    android:textColor="@color/verde_natural"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGuardarReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="22dp"
+                    android:text="Guardar reserva"
+                    android:textColor="@color/blanco"
+                    app:backgroundTint="@color/verde_natural"
+                    app:cornerRadius="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancelarReserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Cancelar"
+                    android:textColor="@color/verde_oscuro"
+                    app:backgroundTint="@color/verde_suave"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>
